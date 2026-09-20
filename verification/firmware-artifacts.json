@@ -1,0 +1,27 @@
+{
+  "platform": "espressif32@6.5.0",
+  "arduino_core": "2.0.14",
+  "images": [
+    {
+      "environment": "m5atoms3r_cam",
+      "path": "build/firmware/m5atoms3r_cam/firmware.bin",
+      "bytes": 271920,
+      "sha256": "d8ed275752cac3e265b4b9a555d6508b569be6fcd0bcd566ead9c4058131e5ee",
+      "hardware_tested": false
+    },
+    {
+      "environment": "m5atoms3r_cam_u059",
+      "path": "build/firmware/m5atoms3r_cam_u059/firmware.bin",
+      "bytes": 271904,
+      "sha256": "e4cbd356f9e75726084b746a97e9729aa1076b27f9faa6a7fb934548c231ac69",
+      "hardware_tested": false
+    },
+    {
+      "environment": "esp32dev",
+      "path": "build/firmware/esp32dev/firmware.bin",
+      "bytes": 301456,
+      "sha256": "9e6204e2ede2446b4a28df048483b24fa0d77c85d61b717e614f7a4ad3d9be34",
+      "hardware_tested": false
+    }
+  ]
+}

@@ -57,7 +57,7 @@ python3 -m venv .venv
 .venv/bin/pio run -e esp32dev
 ```
 
-PlatformIO 首次会下载编译器和 Arduino 框架。构建使用固定版本；配置生成在每次构建前自动执行。
+PlatformIO 首次会下载编译器和 Arduino 框架。固件锁定 `espressif32@6.5.0` / Arduino-ESP32 `2.0.14`，这是已完成本地验证的组合；配置生成在每次构建前自动执行。
 
 **上传会替换当前板上的应用固件。** 先确认型号、原固件恢复方式与接线，记录该板原有配置；本项目没有自动探测并刷写脚本。下面命令由操作者将占位串口替换为已确认的设备后执行：
 
@@ -100,6 +100,8 @@ stop
 ## 验证边界
 
 当前记录在 [verification/STATUS.md](verification/STATUS.md)。未连接板卡时，固件、PN532 通信、物理马达、电源稳定性和实际振动强度均不能算硬件实测。下次接板按 [硬件验收](docs/HARDWARE_ACCEPTANCE.md) 执行。
+
+三个固件配置已在本地编译成功。云端 CI **未执行**：发布时现有 GitHub 登录不具备写入 workflow 的 scope，工作流保存在 [ci/check.yml.template](ci/check.yml.template)。有合适权限的维护者可复制至 `.github/workflows/check.yml` 启用；本项目不要求新增密钥。
 
 ## 开源范围与来源
 
