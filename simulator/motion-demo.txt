@@ -1,0 +1,15 @@
+# Synthetic accelerometer samples in g; no hardware is read.
+arm
+still 2020
+imu 0 0 2 20
+imu 0 0 2 20
+imu 0 0 1 20
+imu 0 0 1 20
+imu 0 0 1 20
+imu 0 0 2 20
+imu 0 0 2 20
+still 3000
+disarm
+imu 0 0 2 20
+imu 0 0 2 20
+quit

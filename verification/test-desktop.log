@@ -4,6 +4,12 @@ PASS 32-bit millis rollover
 PASS hold / UID switch / transient dropout / removal re-arm
 PASS button debounce / hold / second press
 PASS invalid pattern rejection / tag lookup
+PASS default off / explicit arm / calibration / one shake / disarm
+PASS calibration rejects movement and times out
+PASS small jitter / orientation / single spike / sustained acceleration
+PASS detector holdoff and quiet re-arm
+PASS motor suppression / settling / shared player busy-stop-cooldown
+PASS stale / duplicate / NaN / failed read / saturated / zero / reversed time / rollover
 test_default_and_empty_tag_map (test_config.ConfigTests) ... ok
 test_rejects_bad_uid_and_unknown_mapping (test_config.ConfigTests) ... ok
 test_rejects_continuous_on_and_long_total (test_config.ConfigTests) ... ok

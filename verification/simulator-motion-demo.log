@@ -1,0 +1,11 @@
+DESKTOP SIMULATION: no NFC reader or physical vibration
+Commands: play NAME | tag HEX | remove | advance MS | stop | list | quit
+Motion: arm | disarm | still MS | imu AX AY AZ DELTA_MS (synthetic g samples)
+0ms motion calibrating
+2020ms motion armed
+2160ms hello started
+2160ms PWM 180 ############
+2250ms PWM 0
+2350ms PWM 180 ############
+2440ms PWM 0
+5160ms motion off

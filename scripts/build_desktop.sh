@@ -13,6 +13,8 @@ if [[ -z "${CXX:-}" && "$(uname -s)" == Darwin && -x /Library/Developer/CommandL
 fi
 "$compiler" "${flags[@]}" -std=c++17 -Wall -Wextra -Werror -pedantic -Iinclude simulator/main.cpp -o build/simulator
 "$compiler" "${flags[@]}" -std=c++17 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined -Iinclude tests/core_test.cpp -o build/core_test
+"$compiler" "${flags[@]}" -std=c++17 -Wall -Wextra -Werror -pedantic -fsanitize=address,undefined -Iinclude tests/motion_test.cpp -o build/motion_test
 ./build/core_test
+./build/motion_test
 python3 -m unittest discover -s tests -p 'test_*.py' -v
 python3 scripts/generate_config.py --check

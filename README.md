@@ -3,7 +3,8 @@
 **把一次碰触，变成一段可以自己写的振动。**
 
 A small, local, open-source haptic controller. Edit three pulse patterns in JSON;
-trigger them with an NFC tag, an external button, or a USB serial command.
+trigger them with an NFC tag, an external button, a USB serial command, or an
+explicitly armed onboard accelerometer shake detector on AtomS3R-CAM.
 No account, API key, cloud service, contact list, microphone, or camera access.
 
 这是通用的「输入 → 自定义振动」代码切片。它不是音乐生成系统，也不包含产品外观、私人研究或未公开的感知算法。软件通过编译/桌面测试不等于实物已振动。
@@ -14,6 +15,7 @@ No account, API key, cloud service, contact list, microphone, or camera access.
 | --- | --- | --- |
 | 只有电脑 | 跑下面的桌面模拟器，共用固件控制核心 | 无；只显示 PWM 时间线，不会产生物理振动 |
 | M5Stack AtomS3R-CAM AI Chatbot | 默认 `m5atoms3r_cam`；USB 串口 `play hello` → Grove G1 输出 | 独立驱动 + ERM 马达；可选 G2 外接按钮 |
+| 只有 AtomS3R-CAM，无 NFC/按钮 | 串口 `arm`，静置校准，再摇动机身 → 已有振动模式 | 输入只用板载 BMI270；实际振动仍需外接驱动/马达 |
 | AtomS3R-CAM + M5 Unit Vibrator U059 | `m5atoms3r_cam_u059`；Grove 黄线 G2、10 kHz PWM | U059 模块、足够的 5V 供电；串口触发即可 |
 | 经典 ESP32-WROOM / DevKitC V4 | `esp32dev`；PN532 标签 → GPIO25 输出 | PN532、NFC 标签、马达及驱动；GPIO32 外接按钮可先替代 NFC |
 | Seeed reSpeaker，具体型号未核 | 先保留原有语音固件 | 核对型号与引脚后再适配；本仓库不声称该板支持 |
@@ -78,6 +80,27 @@ stop
 ```
 
 `esp32dev` 支持 `learn`，在本地串口只打印下一张读到的标签 UID 一次。默认日志不打印 UID；不会写标签。PN532 不在时，经典 ESP32 环境仍可使用按钮/串口，接回读卡器后复位重新初始化。
+
+### 不加 NFC/按钮：直接用 CAM 机身摇动
+
+两个 CAM 固件配置都包含可选 IMU 功能，**上电默认关闭**。使用官方 M5Unified 驱动访问板载 BMI270（SDA GPIO45、SCL GPIO0）；Grove GPIO1/2 留给振动输出/外接按钮。传感器输入不需要新增配件，触觉输出仍需要马达。
+
+```text
+arm
+```
+
+把设备放稳，等待串口从 `motion calibrating` 变为 `motion armed`，通常需要至少 2 秒。随后做一次明显来回摇动；两次分离的加速度峰值会播放 `button_pattern` 指定的模式，并输出 `imu-shake hello started`（名称随配置改变）。输入 `disarm` 或 `stop` 会停止播放并关闭动作检测。再次启动必须重新 `arm` 和校准。
+
+这是**阈值摇动检测**，不是 AI 手势识别、打响指识别或 head tracking。阈值是待实物校准的起点，不能据此声称日常携带零误触发。静置校准超时、采样失败/超时、异常值或时间倒退都会关闭检测；马达播放期间暂停 I²C 读取，结束后必须重新观察到安静状态，避免马达震动不断触发自己。具体规则与验收见 [IMU 说明](docs/MOTION.md)。
+
+无需接板的合成样本演示（不会访问真实 IMU）：
+
+```sh
+bash scripts/build_desktop.sh
+./build/simulator < simulator/motion-demo.txt
+```
+
+模拟器也支持 `arm`、`still 2020`、`imu 0 0 2 20`（x/y/z 单位 g，最后为推进的毫秒数）、`disarm`，可直接注入样本。
 
 ### 3. 自定义一种触感
 

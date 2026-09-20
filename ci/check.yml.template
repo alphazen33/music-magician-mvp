@@ -12,6 +12,7 @@ jobs:
           python-version: '3.11'
       - run: bash scripts/build_desktop.sh
       - run: ./build/simulator < simulator/demo.txt
+      - run: ./build/simulator < simulator/motion-demo.txt
   firmware:
     runs-on: ubuntu-latest
     steps:

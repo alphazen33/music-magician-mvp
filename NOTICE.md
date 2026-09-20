@@ -12,9 +12,13 @@ or bundled source; the application MIT license does not relicense dependencies.
 | Arduino-ESP32 core | 2.0.14 via platform | [LGPL-2.1; component-specific notices also apply](https://github.com/espressif/arduino-esp32/tree/2.0.14) |
 | Adafruit PN532 | 1.3.4 | [BSD](https://github.com/adafruit/Adafruit-PN532/tree/1.3.4) |
 | Adafruit BusIO | 1.17.0 | [MIT](https://github.com/adafruit/Adafruit_BusIO/tree/1.17.0) |
+| M5Unified (CAM profiles) | 0.2.7 | [MIT; official IMU initialization and conversion](https://github.com/m5stack/M5Unified/tree/0.2.7) |
+| M5GFX (M5Unified dependency) | 0.2.29 | [MIT; bundled components retain their notices](https://github.com/m5stack/M5GFX/tree/0.2.29) |
 
-The S3-CAM build uses Arduino GPIO/PWM/USB serial only, and does not link
-M5Unified, a camera driver, microphone capture, or a cloud assistant. M5Stack's
+The S3-CAM build uses Arduino GPIO/PWM/USB serial and, only after `arm`, the
+official M5Unified IMU utility on the internal I2C bus. It does not call
+`M5.begin()`, initialize a camera/display/audio endpoint, or connect a cloud assistant.
+M5Stack's
 [official CAM kit PlatformIO example](https://docs.m5stack.com/en/core/AtomS3R-CAM%20AI%20Chatbot)
 uses the generic `esp32-s3-devkitc-1` target with `qio_opi`; our board profile follows
 that memory setup and explicitly maps the external GPIO. This is a build target,

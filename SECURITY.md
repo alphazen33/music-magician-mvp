@@ -5,6 +5,7 @@
 - NFC absence is inferred from unsuccessful reads. RF interference or disconnection can therefore re-arm the presentation gate after the absence threshold. This requires real hardware testing; it is not a robust proximity proof.
 - The PN532 upstream frame parser is not treated as a security boundary. Use your own development tags and a trusted module. The application accepts only 4/7-byte UIDs and does not parse tag content.
 - No Wi-Fi, Bluetooth, audio, image, contacts, or location acquisition is enabled. No credentials are needed. `learn` prints a tag UID once on the local serial port when explicitly requested.
+- CAM motion detection is off at boot. `arm` initializes the onboard IMU and begins a fresh stationary calibration; no raw motion samples are stored/uploaded. `disarm` and `stop` stop playback and motion reads. Invalid/stale samples disarm the detector. Threshold shaking is not an identity or intent proof; arm only during active use.
 - Do not commit real personal UID mappings or credentials. Keep your private working configuration outside a public fork or carefully review it before committing.
 - PWM limits reduce ordinary accidental overdrive but do not replace electrical/current limits, appropriate motor supply, or a hardware fail-safe. A frozen processor may hold the last PWM value until reset; this prototype has no independent hardware timeout circuit.
 - Before flashing a previously configured board, preserve its recovery path. Uploading replaces the current application.

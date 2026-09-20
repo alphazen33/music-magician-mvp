@@ -1,10 +1,3 @@
-********************************************************************************
-If you like PlatformIO, please:
-- star it on GitHub > https://github.com/platformio/platformio-core
-- follow us on LinkedIn to stay up-to-date on the latest project news > https://www.linkedin.com/company/platformio/
-- try PlatformIO IDE for embedded development > https://platformio.org/platformio-ide
-********************************************************************************
-
 Processing m5atoms3r_cam (board: esp32-s3-devkitc-1; platform: espressif32@6.5.0; framework: arduino)
 --------------------------------------------------------------------------------
 Verbose mode can be enabled via `-v, --verbose` option
@@ -20,19 +13,100 @@ PACKAGES:
  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
 LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
 LDF Modes: Finder ~ chain, Compatibility ~ soft
-Found 33 compatible libraries
+Found 35 compatible libraries
 Scanning dependencies...
 Dependency Graph
+|-- M5GFX @ 0.2.29
+|-- M5Unified @ 0.2.7
 |-- SPI @ 2.0.0
 Building in release mode
 Compiling build/firmware/m5atoms3r_cam/src/main.cpp.o
-Building build/firmware/m5atoms3r_cam/bootloader.bin
-Generating partitions build/firmware/m5atoms3r_cam/partitions.bin
-esptool.py v4.5.1
-Creating esp32s3 image...
-Merged 1 ELF section
-Successfully created esp32s3 image.
-Compiling build/firmware/m5atoms3r_cam/lib877/SPI/SPI.cpp.o
+Archiving build/firmware/m5atoms3r_cam/lib877/libSPI.a
+Indexing build/firmware/m5atoms3r_cam/lib877/libSPI.a
+Archiving build/firmware/m5atoms3r_cam/lib83e/libWire.a
+Indexing build/firmware/m5atoms3r_cam/lib83e/libWire.a
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/Fonts/efont/lgfx_efont_cn.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/Fonts/efont/lgfx_efont_ja.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/Fonts/efont/lgfx_efont_kr.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/Fonts/efont/lgfx_efont_tw.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/utility/lgfx_miniz.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/utility/lgfx_pngle.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/utility/lgfx_qoi.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/utility/lgfx_qrcode.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/utility/lgfx_tjpgd.c.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/LGFXBase.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/LGFX_Button.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/LGFX_Sprite.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/lgfx_fonts.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/misc/DividedFrameBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/misc/SpriteBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/misc/common_function.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/misc/pixelcopy.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_AMOLED.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_Device.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_ED2208.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_EPDiy.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_FrameBufferBase.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_GDEW0154D67.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_GDEW0154M09.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_HasBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_IT8951.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_LCD.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_M5HDMI.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_M5UnitGLASS.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_M5UnitLCD.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_SSD1306.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_SSD1677.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/panel/Panel_TM1680.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Bus_EPD.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Bus_I2C.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Bus_SPI.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Light_PWM.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Panel_CVBS.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/Panel_EPD.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32c3/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32p4/Bus_DSI.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32p4/Panel_DSI.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32p4/Panel_LT8912B.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32p4/Touch_ST7123.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32s2/Bus_Parallel16.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32s2/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32s3/Bus_Parallel16.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/esp32s3/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/framebuffer/Panel_fb.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/framebuffer/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/sdl/Panel_sdl.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/platforms/sdl/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/touch/Touch_CHSC6540.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/touch/Touch_CSTxxx.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/touch/Touch_FT5x06.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib310/M5GFX/lgfx/v1/touch/Touch_GT911.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/M5Unified.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/AXP192_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/AXP2101_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Button_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/I2C_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/IMU_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/INA3221_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/IP5306_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Log_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/M5Timer.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Mic_Class.cpp.o
+Archiving build/firmware/m5atoms3r_cam/lib310/libM5GFX.a
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/PI4IOE5V6408_Class.cpp.o
+Indexing build/firmware/m5atoms3r_cam/lib310/libM5GFX.a
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Power_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/RTC8563_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Speaker_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/Touch_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/AK8963_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/BMI270_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/BMM150_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/IMU_Base.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/MPU6886_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam/lib1e2/M5Unified/utility/imu/SH200Q_Class.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/Esp.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/FirmwareMSC.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/FunctionalInterrupt.cpp.o
@@ -42,16 +116,16 @@ Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/IPAddress.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/IPv6Address.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/MD5Builder.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/Print.cpp.o
+Archiving build/firmware/m5atoms3r_cam/lib1e2/libM5Unified.a
+Indexing build/firmware/m5atoms3r_cam/lib1e2/libM5Unified.a
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/Stream.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/StreamString.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/Tone.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/USB.cpp.o
-Archiving build/firmware/m5atoms3r_cam/lib877/libSPI.a
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/USBCDC.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/USBMSC.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/WMath.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/WString.cpp.o
-Indexing build/firmware/m5atoms3r_cam/lib877/libSPI.a
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/base64.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/cbuf.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/esp32-hal-adc.c.o
@@ -80,7 +154,6 @@ Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/libb64/cencode.c.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/main.cpp.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/stdlib_noniso.c.o
 Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/wiring_pulse.c.o
-Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/wiring_shift.c.o
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c: In function 'uartSetPins':
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:153:9: warning: 'return' with no value, in function returning non-void
          return;
@@ -88,36 +161,24 @@ build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:149:6: note: declared here
  bool uartSetPins(uint8_t uart_num, int8_t rxPin, int8_t txPin, int8_t ctsPin, int8_t rtsPin)
       ^~~~~~~~~~~
+Compiling build/firmware/m5atoms3r_cam/FrameworkArduino/wiring_shift.c.o
 Archiving build/firmware/m5atoms3r_cam/libFrameworkArduino.a
 Indexing build/firmware/m5atoms3r_cam/libFrameworkArduino.a
 Linking build/firmware/m5atoms3r_cam/firmware.elf
 Retrieving maximum program size build/firmware/m5atoms3r_cam/firmware.elf
 Checking size build/firmware/m5atoms3r_cam/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
-RAM:   [=         ]   5.9% (used 19224 bytes from 327680 bytes)
-Flash: [=         ]   8.1% (used 271549 bytes from 3342336 bytes)
+RAM:   [=         ]   6.9% (used 22652 bytes from 327680 bytes)
+Flash: [=         ]  14.5% (used 485905 bytes from 3342336 bytes)
 Building build/firmware/m5atoms3r_cam/firmware.bin
 esptool.py v4.5.1
 Creating esp32s3 image...
 Merged 2 ELF sections
 Successfully created esp32s3 image.
-========================= [SUCCESS] Took 11.80 seconds =========================
+========================= [SUCCESS] Took 11.24 seconds =========================
 
 Processing esp32dev (board: esp32dev; platform: espressif32@6.5.0; framework: arduino)
 --------------------------------------------------------------------------------
-Library Manager: Installing adafruit/Adafruit PN532 @ 1.3.4
-Downloading 0% 10% 20% 30% 40% 50%
-Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
-Library Manager: Adafruit PN532@1.3.4 has been installed!
-Library Manager: Resolving dependencies...
-Library Manager: Installing Adafruit BusIO
-Downloading 0% 10% 20% 30%
-Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
-Library Manager: Adafruit BusIO@1.17.4 has been installed!
-Library Manager: Installing adafruit/Adafruit BusIO @ 1.17.0
-Downloading 0% 10% 20% 30%
-Unpacking 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
-Library Manager: Adafruit BusIO@1.17.0 has been installed!
 Verbose mode can be enabled via `-v, --verbose` option
 generated include/generated_config.h
 CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
@@ -138,94 +199,12 @@ Dependency Graph
 |-- SPI @ 2.0.0
 Building in release mode
 Compiling build/firmware/esp32dev/src/main.cpp.o
-Building build/firmware/esp32dev/bootloader.bin
-Generating partitions build/firmware/esp32dev/partitions.bin
-esptool.py v4.5.1
-Creating esp32 image...
-Merged 1 ELF section
-Successfully created esp32 image.
-Compiling build/firmware/esp32dev/lib83e/Wire/Wire.cpp.o
-Compiling build/firmware/esp32dev/lib877/SPI/SPI.cpp.o
-Compiling build/firmware/esp32dev/lib6f2/Adafruit BusIO@1.17.0/Adafruit_BusIO_Register.cpp.o
-Compiling build/firmware/esp32dev/lib6f2/Adafruit BusIO@1.17.0/Adafruit_GenericDevice.cpp.o
-Compiling build/firmware/esp32dev/lib6f2/Adafruit BusIO@1.17.0/Adafruit_I2CDevice.cpp.o
-Compiling build/firmware/esp32dev/lib6f2/Adafruit BusIO@1.17.0/Adafruit_SPIDevice.cpp.o
-Compiling build/firmware/esp32dev/lib61a/Adafruit PN532/Adafruit_PN532.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/Esp.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/FirmwareMSC.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/FunctionalInterrupt.cpp.o
-Archiving build/firmware/esp32dev/lib877/libSPI.a
-Archiving build/firmware/esp32dev/lib83e/libWire.a
-Archiving build/firmware/esp32dev/lib61a/libAdafruit PN532.a
-Archiving build/firmware/esp32dev/lib6f2/libAdafruit BusIO@1.17.0.a
-Compiling build/firmware/esp32dev/FrameworkArduino/HWCDC.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/HardwareSerial.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/IPAddress.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/IPv6Address.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/MD5Builder.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/Print.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/Stream.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/StreamString.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/Tone.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/USB.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/USBCDC.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/USBMSC.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/WMath.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/WString.cpp.o
-Indexing build/firmware/esp32dev/lib877/libSPI.a
-Indexing build/firmware/esp32dev/lib6f2/libAdafruit BusIO@1.17.0.a
-Indexing build/firmware/esp32dev/lib61a/libAdafruit PN532.a
-Indexing build/firmware/esp32dev/lib83e/libWire.a
-Compiling build/firmware/esp32dev/FrameworkArduino/base64.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/cbuf.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-adc.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-bt.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-cpu.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-dac.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-gpio.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-i2c-slave.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-i2c.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-ledc.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-matrix.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-misc.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-psram.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-rgb-led.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-rmt.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-sigmadelta.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-spi.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-time.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-timer.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-tinyusb.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-touch.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/esp32-hal-uart.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/firmware_msc_fat.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/libb64/cdecode.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/libb64/cencode.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/main.cpp.o
-Compiling build/firmware/esp32dev/FrameworkArduino/stdlib_noniso.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/wiring_pulse.c.o
-Compiling build/firmware/esp32dev/FrameworkArduino/wiring_shift.c.o
-build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c: In function 'uartSetPins':
-build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:153:9: warning: 'return' with no value, in function returning non-void
-         return;
-         ^~~~~~
-build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:149:6: note: declared here
- bool uartSetPins(uint8_t uart_num, int8_t rxPin, int8_t txPin, int8_t ctsPin, int8_t rtsPin)
-      ^~~~~~~~~~~
-Archiving build/firmware/esp32dev/libFrameworkArduino.a
-Indexing build/firmware/esp32dev/libFrameworkArduino.a
-Linking build/firmware/esp32dev/firmware.elf
 Retrieving maximum program size build/firmware/esp32dev/firmware.elf
 Checking size build/firmware/esp32dev/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [=         ]   6.8% (used 22160 bytes from 327680 bytes)
-Flash: [==        ]  23.0% (used 301093 bytes from 1310720 bytes)
-Building build/firmware/esp32dev/firmware.bin
-esptool.py v4.5.1
-Creating esp32 image...
-Merged 2 ELF sections
-Successfully created esp32 image.
-========================= [SUCCESS] Took 32.01 seconds =========================
+Flash: [==        ]  23.0% (used 301237 bytes from 1310720 bytes)
+========================= [SUCCESS] Took 1.35 seconds =========================
 
 Processing m5atoms3r_cam_u059 (board: esp32-s3-devkitc-1; platform: espressif32@6.5.0; framework: arduino)
 --------------------------------------------------------------------------------
@@ -242,19 +221,101 @@ PACKAGES:
  - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
 LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
 LDF Modes: Finder ~ chain, Compatibility ~ soft
-Found 33 compatible libraries
+Found 35 compatible libraries
 Scanning dependencies...
 Dependency Graph
+|-- M5GFX @ 0.2.29
+|-- M5Unified @ 0.2.7
 |-- SPI @ 2.0.0
 Building in release mode
 Compiling build/firmware/m5atoms3r_cam_u059/src/main.cpp.o
-Building build/firmware/m5atoms3r_cam_u059/bootloader.bin
-Generating partitions build/firmware/m5atoms3r_cam_u059/partitions.bin
-esptool.py v4.5.1
-Creating esp32s3 image...
-Merged 1 ELF section
-Successfully created esp32s3 image.
-Compiling build/firmware/m5atoms3r_cam_u059/lib877/SPI/SPI.cpp.o
+Archiving build/firmware/m5atoms3r_cam_u059/lib877/libSPI.a
+Indexing build/firmware/m5atoms3r_cam_u059/lib877/libSPI.a
+Archiving build/firmware/m5atoms3r_cam_u059/lib83e/libWire.a
+Indexing build/firmware/m5atoms3r_cam_u059/lib83e/libWire.a
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/Fonts/IPA/lgfx_font_japan.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/Fonts/efont/lgfx_efont_cn.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/Fonts/efont/lgfx_efont_ja.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/Fonts/efont/lgfx_efont_kr.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/Fonts/efont/lgfx_efont_tw.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/utility/lgfx_miniz.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/utility/lgfx_pngle.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/utility/lgfx_qoi.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/utility/lgfx_qrcode.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/utility/lgfx_tjpgd.c.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/LGFXBase.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/LGFX_Button.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/LGFX_Sprite.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/lgfx_fonts.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/misc/DividedFrameBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/misc/SpriteBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/misc/common_function.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/misc/pixelcopy.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_AMOLED.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_Device.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_ED2208.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_EPDiy.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_FrameBufferBase.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_GDEW0154D67.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_GDEW0154M09.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_HasBuffer.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_IT8951.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_LCD.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_M5HDMI.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_M5UnitGLASS.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_M5UnitLCD.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_SSD1306.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_SSD1677.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/panel/Panel_TM1680.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Bus_EPD.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Bus_I2C.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Bus_SPI.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Light_PWM.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Panel_CVBS.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/Panel_EPD.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32c3/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32p4/Bus_DSI.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32p4/Panel_DSI.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32p4/Panel_LT8912B.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32p4/Touch_ST7123.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32s2/Bus_Parallel16.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32s2/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32s3/Bus_Parallel16.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/esp32s3/Bus_Parallel8.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/framebuffer/Panel_fb.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/framebuffer/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/sdl/Panel_sdl.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/platforms/sdl/common.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/touch/Touch_CHSC6540.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/touch/Touch_CSTxxx.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/touch/Touch_FT5x06.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/lib649/M5GFX/lgfx/v1/touch/Touch_GT911.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/M5Unified.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/AXP192_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/AXP2101_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Button_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/I2C_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/IMU_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/INA3221_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/IP5306_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Log_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/M5Timer.cpp.o
+Archiving build/firmware/m5atoms3r_cam_u059/lib649/libM5GFX.a
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Mic_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/PI4IOE5V6408_Class.cpp.o
+Indexing build/firmware/m5atoms3r_cam_u059/lib649/libM5GFX.a
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Power_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/RTC8563_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Speaker_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/Touch_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/AK8963_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/BMI270_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/BMM150_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/IMU_Base.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/MPU6886_Class.cpp.o
+Compiling build/firmware/m5atoms3r_cam_u059/libcc5/M5Unified/utility/imu/SH200Q_Class.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/Esp.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/FirmwareMSC.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/FunctionalInterrupt.cpp.o
@@ -264,9 +325,9 @@ Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/IPAddress.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/IPv6Address.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/MD5Builder.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/Print.cpp.o
-Archiving build/firmware/m5atoms3r_cam_u059/lib877/libSPI.a
+Archiving build/firmware/m5atoms3r_cam_u059/libcc5/libM5Unified.a
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/Stream.cpp.o
-Indexing build/firmware/m5atoms3r_cam_u059/lib877/libSPI.a
+Indexing build/firmware/m5atoms3r_cam_u059/libcc5/libM5Unified.a
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/StreamString.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/Tone.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/USB.cpp.o
@@ -302,7 +363,6 @@ Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/libb64/cencode.c.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/main.cpp.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/stdlib_noniso.c.o
 Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/wiring_pulse.c.o
-Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/wiring_shift.c.o
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c: In function 'uartSetPins':
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:153:9: warning: 'return' with no value, in function returning non-void
          return;
@@ -310,24 +370,25 @@ build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.
 build/pio-core/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-uart.c:149:6: note: declared here
  bool uartSetPins(uint8_t uart_num, int8_t rxPin, int8_t txPin, int8_t ctsPin, int8_t rtsPin)
       ^~~~~~~~~~~
+Compiling build/firmware/m5atoms3r_cam_u059/FrameworkArduino/wiring_shift.c.o
 Archiving build/firmware/m5atoms3r_cam_u059/libFrameworkArduino.a
 Indexing build/firmware/m5atoms3r_cam_u059/libFrameworkArduino.a
 Linking build/firmware/m5atoms3r_cam_u059/firmware.elf
 Retrieving maximum program size build/firmware/m5atoms3r_cam_u059/firmware.elf
 Checking size build/firmware/m5atoms3r_cam_u059/firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
-RAM:   [=         ]   5.9% (used 19224 bytes from 327680 bytes)
-Flash: [=         ]   8.1% (used 271545 bytes from 3342336 bytes)
+RAM:   [=         ]   6.9% (used 22652 bytes from 327680 bytes)
+Flash: [=         ]  14.5% (used 485913 bytes from 3342336 bytes)
 Building build/firmware/m5atoms3r_cam_u059/firmware.bin
 esptool.py v4.5.1
 Creating esp32s3 image...
 Merged 2 ELF sections
 Successfully created esp32s3 image.
-========================= [SUCCESS] Took 4.59 seconds =========================
+========================= [SUCCESS] Took 10.35 seconds =========================
 
 Environment         Status    Duration
 ------------------  --------  ------------
-m5atoms3r_cam       SUCCESS   00:00:11.798
-esp32dev            SUCCESS   00:00:32.013
-m5atoms3r_cam_u059  SUCCESS   00:00:04.593
-========================= 3 succeeded in 00:00:48.403 =========================
+m5atoms3r_cam       SUCCESS   00:00:11.237
+esp32dev            SUCCESS   00:00:01.346
+m5atoms3r_cam_u059  SUCCESS   00:00:10.346
+========================= 3 succeeded in 00:00:22.929 =========================

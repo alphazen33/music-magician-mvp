@@ -6,6 +6,12 @@
 #endif
 #include "generated_config.h"
 #include "board_pins.h"
+#if HAPTIC_IMU
+  #include "motion_sensor.h"
+MotionSensor motion_sensor;
+haptic::ShakeDetector shake;
+uint32_t last_imu_poll = 0, last_imu_good = 0;
+#endif
 
 #if HAPTIC_NFC
 constexpr uint32_t kPollMs = 120;
@@ -35,7 +41,32 @@ void executeCommand() {
   if (!strcmp(command, "stop")) {
     player.stop(millis());
     ledcWrite(kPwmChannel, 0);
+#if HAPTIC_IMU
+    shake.disarm();
+#endif
     Serial.println("stopped");
+  } else if (!strcmp(command, "arm")) {
+#if HAPTIC_IMU
+    if (player.active()) {
+      Serial.println("arm rejected: stop playback first");
+    } else if (!motion_sensor.begin()) {
+      shake.disarm();
+      Serial.println("IMU unavailable; motion remains off");
+    } else {
+      shake.arm(millis());
+      last_imu_poll = last_imu_good = millis();
+      Serial.println("motion calibrating: leave the device still for 2 seconds; timeout 10 seconds");
+    }
+#else
+    Serial.println("IMU not enabled in this board profile");
+#endif
+  } else if (!strcmp(command, "disarm")) {
+#if HAPTIC_IMU
+    shake.disarm();
+#endif
+    player.stop(millis());
+    ledcWrite(kPwmChannel, 0);
+    Serial.println("motion off; stopped");
   } else if (!strncmp(command, "play ", 5)) {
     play(config::patternByName(command + 5), "serial");
   } else if (!strcmp(command, "learn")) {
@@ -48,7 +79,7 @@ void executeCommand() {
   } else if (!strcmp(command, "list")) {
     for (const auto& p : config::kPatterns) Serial.println(p.name);
   } else {
-    Serial.println("commands: list | play hello | play heartbeat | play celebrate | stop | learn");
+    Serial.println("commands: list | play NAME | stop | learn | arm | disarm");
   }
 }
 
@@ -90,7 +121,7 @@ void setup() {
 #else
   Serial.printf("AtomS3R-CAM: G%d motor-driver signal; G%d external button; NFC disabled\n", kMotor, kButton);
 #endif
-  Serial.println("type list, play hello, stop, or learn; newline required");
+  Serial.println("type list, play hello, stop, learn, arm, disarm; newline required; motion OFF at boot");
 }
 
 void loop() {
@@ -98,6 +129,25 @@ void loop() {
   serviceSerial();
   if (button.update(digitalRead(kButton) == LOW, millis()))
     play(int(config::kButtonPattern), "button");
+
+#if HAPTIC_IMU
+  auto before = shake.state();
+  if (player.active()) {
+    shake.suppress(); // Never read I2C while generating motor pulses.
+    last_imu_good = millis();
+  } else if (shake.state() != haptic::ShakeDetector::State::Off
+             && uint32_t(millis() - last_imu_poll) >= 20) {
+    last_imu_poll = millis();
+    float x = 0, y = 0, z = 0;
+    if (motion_sensor.read(x, y, z)) {
+      last_imu_good = millis();
+      if (shake.sample(x, y, z, last_imu_good)) play(int(config::kButtonPattern), "imu-shake");
+    } else if (uint32_t(millis() - last_imu_good) >= haptic::ShakeDetector::kMaxSampleGapMs) {
+      shake.sample(0, 0, 0, millis(), false);
+    }
+  }
+  if (shake.state() != before) Serial.printf("motion %s\n", shake.stateName());
+#endif
 
   // The vendor NFC call has bounded waits but is not async. Never enter it
   // while a pattern (including its silence gaps) is active, so pulse timing
