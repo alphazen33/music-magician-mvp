@@ -1,0 +1,23 @@
+DESKTOP SIMULATION: no NFC reader or physical vibration
+Commands: play NAME | tag HEX | remove | advance MS | stop | list | quit
+0ms hello started
+0ms PWM 180 ############
+90ms PWM 0
+190ms PWM 180 ############
+280ms PWM 0
+1500ms time
+1500ms tag held; no retrigger
+1500ms tag removed
+2100ms time
+2100ms celebrate started
+2100ms PWM 160 ##########
+2180ms PWM 0
+2200ms time
+2200ms heartbeat cooldown
+3200ms time
+3200ms heartbeat started
+3200ms PWM 200 #############
+3270ms PWM 0
+3370ms PWM 160 ##########
+3530ms PWM 0
+4200ms time

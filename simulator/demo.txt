@@ -1,0 +1,14 @@
+# Any tag plays hello; the two synthetic configured tags have custom mappings.
+tag 12345678
+advance 1500
+tag 12345678
+remove
+advance 600
+tag DEADBEEF
+advance 100
+stop
+play heartbeat
+advance 1000
+play heartbeat
+advance 1000
+quit

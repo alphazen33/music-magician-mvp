@@ -1,0 +1,15 @@
+{
+  "cooldown_ms": 1000,
+  "release_ms": 500,
+  "button_pattern": "hello",
+  "unknown_tag_pattern": "hello",
+  "patterns": [
+    {"name": "hello", "steps": [[90, 180], [100, 0], [90, 180]]},
+    {"name": "heartbeat", "steps": [[70, 200], [100, 0], [160, 160], [350, 0]]},
+    {"name": "celebrate", "steps": [[80, 160], [80, 0], [80, 190], [80, 0], [220, 220]]}
+  ],
+  "tags": [
+    {"uid": "04A1B2C3D4E5F6", "pattern": "heartbeat"},
+    {"uid": "DEADBEEF", "pattern": "celebrate"}
+  ]
+}
