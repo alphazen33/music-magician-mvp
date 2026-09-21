@@ -9,6 +9,14 @@ No account, API key, cloud service, contact list, microphone, or camera access.
 
 这是通用的「输入 → 自定义振动」代码切片。它不是音乐生成系统，也不包含产品外观、私人研究或未公开的感知算法。软件通过编译/桌面测试不等于实物已振动。
 
+## 图解安装与兼容性
+
+**不是所有 ESP32 都能直接刷。** 当前适配 AtomS3R-CAM（独立驱动 / U059）和经典 ESP32-WROOM；其他板需要核对与移植。首次安装需要 PlatformIO 编译和上传，没有网页一键安装。
+
+[打开完整安装指南：六张图 + 可复制命令 + 故障处理](docs/INSTALL.md)
+
+[![六张图读懂接线与安装](docs/images/overview.png)](docs/INSTALL.md)
+
 ## 今晚可以怎么跑
 
 | 手上有什么 | 路径 | 还缺什么 |
